@@ -57,6 +57,9 @@ defmodule Blinky.MixProject do
       {:nerves_system_rpi4, "~> 1.10", runtime: false, targets: :rpi4},
       {:nerves_system_bbb, "~> 2.5", runtime: false, targets: :bbb},
       {:nerves_system_x86_64, "~> 1.10", runtime: false, targets: :x86_64},
+      {:nerves_leds, "~> 0.8", targets: @all_targets},
+      {:httpoison, "~> 1.6"},
+      {:jason, "~> 1.1"}
     ]
   end
 

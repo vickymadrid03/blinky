@@ -68,6 +68,12 @@ config :nerves_network, :default,
     ipv4_address_method: :dhcp
   ]
 
+config :nerves_leds, names: [green: "led0"]
+
+config :blinky,
+  led_list: [:green],
+  status_endpoint: System.get_env("BLINKY_STATUS_ENDPOINT") || "https://api.npoint.io/1b79b2dcd0a0bd51f32b"
+
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 # Uncomment to use target specific configurations

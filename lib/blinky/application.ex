@@ -14,6 +14,7 @@ defmodule Blinky.Application do
         # Children for all targets
         # Starts a worker by calling: Blinky.Worker.start_link(arg)
         # {Blinky.Worker, arg},
+        {Blinky.Blinker, Application.get_env(:blinky, :led_list)}
       ] ++ children(target())
 
     Supervisor.start_link(children, opts)
